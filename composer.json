@@ -1,5 +1,6 @@
 {
 	"name": "zeroseven/pagebased-news",
+	"description": "Create news articles as “normal” pages in TYPO3. Easy to install and ready to use straight away.",
 	"license": "GPL-2.0-only",
 	"type": "typo3-cms-extension",
 	"authors": [

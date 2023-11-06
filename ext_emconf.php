@@ -2,6 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Article',
+    'description' => 'Create news articles as "normal" pages in TYPO3. Easy to install and ready to use straight away.',
     'category' => 'plugin',
     'author' => 'Raphael Thanner',
     'author_email' => 'r.thanner@zeroseven.de',
