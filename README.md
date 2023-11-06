@@ -13,6 +13,7 @@ managed in TYPO3 with all the advantages and functions of "normal" pages
 - Contacts
 - Relations
 - Rss feed
+- Structured data
 - [and more …](https://github.com/zeroseven/pagebased#readme)
 
 ## Quick installation
