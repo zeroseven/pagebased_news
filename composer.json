@@ -1,27 +1,27 @@
 {
-  "name": "zeroseven/pagebased-news",
-  "license": "GPL-2.0-only",
-  "type": "typo3-cms-extension",
-  "authors": [
-    {
-      "name": "zeroseven design studios GmbH",
-      "email": "typo3@zeroseven.de",
-      "homepage": "https://www.zeroseven.de/",
-      "role": "Company"
-    }
-  ],
-  "require": {
-    "typo3/cms-core": "^12.4.0",
-    "zeroseven/pagebased": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Zeroseven\\PagebasedNews\\": "Classes/"
-    }
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "pagebased_news"
-    }
-  }
+	"name": "zeroseven/pagebased-news",
+	"license": "GPL-2.0-only",
+	"type": "typo3-cms-extension",
+	"authors": [
+		{
+			"name": "zeroseven design studios GmbH",
+			"email": "typo3@zeroseven.de",
+			"homepage": "https://www.zeroseven.de/",
+			"role": "Company"
+		}
+	],
+	"require": {
+		"php": "^8.0 | ^8.1",
+		"zeroseven/pagebased": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Zeroseven\\PagebasedNews\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "pagebased_news"
+		}
+	}
 }

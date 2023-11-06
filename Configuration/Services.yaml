@@ -1,8 +1,14 @@
 services:
-  _defaults:
-    autowire: true
-    autoconfigure: true
-    public: false
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
 
-  Zeroseven\PagebasedNews\:
-    resource: '../Classes/*'
+    Zeroseven\PagebasedNews\:
+        resource: '../Classes/*'
+
+    Zeroseven\PagebasedNews\EventListener\ExtendStructuredDataEvent:
+        tags:
+            -   name: event.listener
+                identifier: 'pagebased-news/extend-structured-data'
+                event: Zeroseven\Pagebased\Event\StructuredDataEvent
