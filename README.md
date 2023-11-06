@@ -1,6 +1,19 @@
-# ARTICLE-EXTENSION
+# News
 
-This extension is based on the **[pagebased](../pagebased/README.md)** extension to create article objects that can be managed in TYPO3 with all the advantages and functions of normal pages
+This extension is based on the [TYPO3 pagebased extension](../pagebased/README.md) to create news articles that can be
+managed in TYPO3 with all the advantages and functions of "normal" pages
+
+![Page based news articles in TYPO3](Resources/Public/Images/Example.png)
+
+## Features
+
+- List and filter plugin
+- Tags
+- Categories
+- Contacts
+- Relations
+- Rss feed
+- [and more …](https://github.com/zeroseven/pagebased#readme)
 
 ## Quick installation
 
@@ -13,12 +26,13 @@ This extension is based on the **[pagebased](../pagebased/README.md)** extension
 ```typo3_typoscript
 page.16848430148 = USER
 page.16848430148 {
-  userFunc = Zeroseven\Pagebased\Utility\RenderUtility->renderUserFunc
-  file = EXT:pagebased_news/Resources/Private/Templates/Info.html
-  registration = pagebased_news
+    userFunc = Zeroseven\Pagebased\Utility\RenderUtility->renderUserFunc
+    file = EXT:pagebased_news/Resources/Private/Templates/Info.html
+    registration = pagebased_news
 }
 ```
 
 ## More information
 
-Check out the **[pagebased](../pagebased/README.md)** extension for more information about the configuration and usage of this extension.
+Check out the **[pagebased](../pagebased/README.md)** extension for more information about the configuration and usage
+of this extension.
