@@ -3,9 +3,9 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Article',
     'category' => 'plugin',
-//  'author' => 'Max Mustermann',
-//  'author_email' => 'm.mustermann@zeroseven.de',
-//  'author_company' => 'Company name',
+    'author' => 'Raphael Thanner',
+    'author_email' => 'r.thanner@zeroseven.de',
+    'author_company' => 'zeroseven design studios GmbH',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
     'version' => '0.0.0',
