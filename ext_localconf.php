@@ -1,35 +1,32 @@
  <?php
 
-defined('TYPO3') || die('🧨');
+defined('TYPO3') || die('📰');
 
-call_user_func(static function () {
-    $object = \Zeroseven\Pagebased\Registration\ObjectRegistration::create('Article')
+call_user_func(static function (string $_EXTKEY) {
+    $object = \Zeroseven\Pagebased\Registration\ObjectRegistration::create('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.object.title')
         ->setClassName(\Zeroseven\PagebasedNews\Domain\Model\Article::class)
         ->setControllerClass(\Zeroseven\PagebasedNews\Controller\ArticleController::class)
         ->setRepositoryClass(\Zeroseven\PagebasedNews\Domain\Repository\ArticleRepository::class)
         ->enableDate(true)
-//      ->enableTopics(1)
-//      ->enableContact(1)
         ->enableRelations()
         ->enableTop()
         ->enableTags();
 
-    $category = \Zeroseven\Pagebased\Registration\CategoryRegistration::create('Article-Category')
+    $category = \Zeroseven\Pagebased\Registration\CategoryRegistration::create('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.category.title')
         ->setClassName(\Zeroseven\PagebasedNews\Domain\Model\Category::class)
         ->setRepositoryClass(\Zeroseven\PagebasedNews\Domain\Repository\CategoryRepository::class)
-        ->setSorting('title')
         ->setDocumentType(148);
 
-    $listPlugin = \Zeroseven\Pagebased\Registration\ListPluginRegistration::create('Article list')
-        ->setDescription('Display objects of type "article" in a list');
+    $listPlugin = \Zeroseven\Pagebased\Registration\ListPluginRegistration::create('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.list.title')
+        ->setDescription('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.list.description');
 
-    $filterPlugin = \Zeroseven\Pagebased\Registration\FilterPluginRegistration::create('Article filter')
-        ->setDescription('Filter "article" objects');
+    $filterPlugin = \Zeroseven\Pagebased\Registration\FilterPluginRegistration::create('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.filter.title')
+        ->setDescription('LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:registration.filter.description');
 
-    \Zeroseven\Pagebased\Registration\Registration::create('pagebased_news')
+    \Zeroseven\Pagebased\Registration\Registration::create($_EXTKEY)
         ->setObject($object)
         ->setCategory($category)
         ->enableListPlugin($listPlugin)
         ->enableFilterPlugin($filterPlugin)
         ->store();
-});
+}, 'pagebased_news');
