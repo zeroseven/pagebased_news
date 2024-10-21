@@ -18,11 +18,7 @@
 	"require": {
 		"php": "^8.0 | ^8.1",
 		"typo3/cms-core": "^13.4",
-		"zeroseven/pagebased": "*",
-		"doctrine/dbal": "~4.0.0"
-	},
-	"conflict": {
-        "doctrine/dbal": "^4.1.0"
+		"zeroseven/pagebased": "*"
 	},
 	"autoload": {
 		"psr-4": {
