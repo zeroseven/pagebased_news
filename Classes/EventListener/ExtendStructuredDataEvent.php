@@ -75,6 +75,7 @@ class ExtendStructuredDataEvent
             }
 
             if ($image = $article->getFirstImage()) {
+                // @extensionScannerIgnoreLine
                 $event->addProperty('image', $image);
             }
 
